@@ -30,7 +30,7 @@ export async function register() {
       if (insertError) throw insertError;
     }
     alert("Cadastro realizado com sucesso!");
-    window.location.href = "../interfaces/login.html";
+    window.location.href = "login.html";
   } catch (err) {
     console.error(err.message);
     alert("Erro ao registrar: " + err.message);
@@ -47,7 +47,7 @@ export async function login() {
   try {
     const { data, error } = await client.auth.signInWithPassword({ email, password });
     if (error) throw error;
-    window.location.href = "../interfaces/home.html";
+    window.location.href = "index.html";
   } catch (err) {
     console.error(err.message);
     alert("Erro ao logar: " + err.message);
@@ -57,7 +57,7 @@ export async function login() {
 export async function logout() {
   try {
     await client.auth.signOut();
-    window.location.href = "../interfaces/login.html";
+    window.location.href = "login.html";
   } catch (err) {
     console.error(err.message);
     alert("Erro ao sair da conta.");
@@ -72,7 +72,7 @@ export async function getUserSession() {
 export async function showUser() {
   const user = await getUserSession();
   if (!user) {
-    window.location.href = "../interfaces/login.html";
+    window.location.href = "login.html";
     return;
   }
   try {
