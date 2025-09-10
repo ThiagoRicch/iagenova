@@ -1,0 +1,106 @@
+:root {
+    --preto : #0F0E0E;
+    --branco : #F5FAE1;
+}
+
+.imagem__genova, .imagem__genova__navbar {       
+    height: 30px;
+    width: 30px;
+}
+
+.imagem__genova__branco {
+  height: 20px ;
+  width: 20px;
+}
+
+.imagem__card__cerebro, .imagem__card__cerebro2, .imagem__card__bot {
+    width: 100px;
+    height: 100px;
+}
+
+.info__fale__conosco {
+
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  gap: 70px;
+}
+
+.card-img-top {
+
+  width: 150px;
+  height: 150px;
+}
+
+.card {
+  align-items: center;
+}
+
+
+input[type=checkbox] {
+  border: 2px solid var(--preto);
+  box-shadow: none;
+}
+
+input[type=checkbox]:checked,
+input[type="checkbox"]:focus {
+  background-color: var(--preto);
+  border-color: var(--preto);
+  box-shadow: none;
+  outline: none;
+}
+
+[data-bs-theme="dark"] {
+  color: white;
+  .nav-link{
+    --bs-nav-link-color: white;
+    
+  }
+}
+
+@media (max-width: 767.98px) { 
+    .card-img-top {
+        width: 100px;
+
+    }
+
+    .info__fale__conosco {
+        margin-top: 30%;
+        display: flex;
+        flex-direction: column;
+        padding: 2%;
+    }
+
+    .card {
+      text-align: center;
+      width: 200px;
+    }
+
+    .card-title, .card-text {
+      width: 300px;
+    }
+
+}
+
+@media (max-width: 1336px) { 
+
+  .info__fale__conosco {
+        margin-top: 16%;
+        display: flex;
+        flex-direction: column;
+        padding: 2%;
+        align-items: center;
+    }
+
+    .card {
+      text-align: center;
+      width: 200px;
+    }
+
+    .card-title, .card-text {
+      width: 300px;
+    }
+    
+ }
+
+

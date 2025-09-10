@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Genova</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/estilos.css">
+</head>
+
+<body data-bs-theme="light">
+    <!--Abaixo é o header-->
+    <header>
+        <nav class="navbar bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img class="imagem__genova" src="../assets/genova.svg"
+                        alt="logo genova"><strong>enova</strong></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img class="imagem__genova__navbar"
+                                src="../assets/genova.svg" alt="logo genova"><strong class="titulo__menu__navbar">enova</strong>
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../interfaces/home.html">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../interfaces/chat.html">GenovaIA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Mais..
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../interfaces/profile.html">Meu Perfil</a></li>
+                                    <li><a class="dropdown-item" href="../interfaces/faleconosco.html">Fale Conosco</a></li>
+                                    <li><a class="dropdown-item" href="#"><div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" role="switch" id="modo__noturno">
+                                    <label class="form-check-label" for="modo__noturno">Modo Noturno</label>
+                                    </div></a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--Abaixo é o Carrosel-->
+
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-label="Slide 1" aria-current="true"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"
+                class=""></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"
+                class=""></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class = "img-fluid d-md-none my-5" src="../assets/slide1_mobile.png" alt="slide 1 do mobile">
+                <img class = "img-fluid d-none d-md-block d-xl-none " src="../assets/slide1_tablet.png" alt="slide 1 do mobile">
+                    <div class="carousel-caption d-none d-md-block d-xl-none">
+                        <h5 class="text-secondary">
+                            <font dir="auto" style="vertical-align: inherit;">
+                                <font dir="auto" style="vertical-align: inherit;">Suporte técnico na palma da sua mão</font>
+                            </font>
+                        </h5>
+                        <p class="text-secondary">
+                            <font dir="auto" style="vertical-align: inherit;">
+                                <font dir="auto" style="vertical-align: inherit;">Soluções rápidas, acessíveis e
+                                    inteligentes.</font>
+                            </font>
+                        </p>
+                    </div>
+                <img class = "img-fluid container-fluid d-none d-md-none d-xl-block" src="../assets/slide1_desk.png" alt="slide 1 do desk">
+                    <div class="carousel-caption d-none d-md-none d-xl-block">
+                        <h5 class="text-secondary">
+                            <font dir="auto" style="vertical-align: inherit;">
+                                <font dir="auto" style="vertical-align: inherit;">A versão completa para o seu ambiente de trabalho</font>
+                            </font>
+                        </h5>
+                        <p class="text-secondary">
+                            <font dir="auto" style="vertical-align: inherit;">
+                                <font dir="auto" style="vertical-align: inherit;">A força da Genova agora no seu desktop.</font>
+                            </font>
+                        </p>
+                    </div>
+            </div>
+            <div class="carousel-item">
+                <img class = "img-fluid d-md-none my-5" src="../assets/slide2_mobile.png" alt="slide 2 do mobile">
+                <img class = "img-fluid d-none d-md-block d-xl-none " src="../assets/slide2_tablet.png" alt="slide 2 do mobile">
+                    <div class="carousel-caption d-none d-md-block d-xl-none">
+                        <h5 class = "titulo__slide2__tablet">
+                            <font dir="auto" style="vertical-align: inherit;">
+                                <font dir="auto" style="vertical-align: inherit;">Tecnologia que simplifica, não complica</font>
+                            </font>
+                        </h5>
+                        <p class = "paragrafo__slide2__tablet">
+                            <font dir="auto" style="vertical-align: inherit;">
+                                <font dir="auto" style="vertical-align: inherit;">Adeus complicações, olá soluções.</font>
+                            </font>
+                        </p>
+                    </div>
+                <img class = "img-fluid container-fluid d-none d-md-none d-xl-block" src="../assets/slide2_desk.png" alt="slide 2 do desk">
+                <div class="carousel-caption d-none d-md-none d-xl-block">
+                    <h5 class="text-secondary">
+                        <font dir="auto" style="vertical-align: inherit;">
+                            <font dir="auto" style="vertical-align: inherit;">Automação que trabalha para você</font>
+                        </font>
+                    </h5>
+                    <p class="text-secondary">
+                        <font dir="auto" style="vertical-align: inherit;">
+                            <font dir="auto" style="vertical-align: inherit;">Aproveite cada recurso e maximize seus resultados.</font>
+                        </font>
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class = "img-fluid d-md-none my-5" src="../assets/slide3_mobile.png" alt="slide 3 do mobile">
+                <img class = "img-fluid d-none d-md-block d-xl-none " src="../assets/slide3_tablet.png" alt="slide 3 do mobile">
+                    <div class="carousel-caption d-none d-md-block d-xl-none">
+                        <h5 class="text-secondary">
+                            <font dir="auto" style="vertical-align: inherit;">
+                                <font dir="auto" style="vertical-align: inherit;">Suporte técnico na palma da sua mão</font>
+                            </font>
+                        </h5>
+                        <p class="text-secondary">
+                            <font dir="auto" style="vertical-align: inherit;">
+                                <font dir="auto" style="vertical-align: inherit;">Soluções rápidas, acessíveis e
+                                    inteligentes.</font>
+                            </font>
+                        </p>
+                    </div>
+                <img class = "img-fluid container-fluid d-none d-md-none d-xl-block" src="../assets/slide3_desk.png" alt="slide 3 do desk">
+                <div class="carousel-caption d-none d-md-none d-xl-block">
+                    <h5 class="text-secondary">
+                        <font dir="auto" style="vertical-align: inherit;">
+                            <font dir="auto" style="vertical-align: inherit;">Cuidando dos detalhes para entregar excelência</font>
+                        </font>
+                    </h5>
+                    <p class="text-secondary">
+                        <font dir="auto" style="vertical-align: inherit;">
+                            <font dir="auto" style="vertical-align: inherit;">Responsabilidade que gera resultados</font>
+                        </font>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="text-bg-dark carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">
+                <font dir="auto" style="vertical-align: inherit;">
+                    <font dir="auto" style="vertical-align: inherit;">Anterior</font>
+                </font>
+            </span>
+        </button>
+        <button class="carousel-control-next" type="button"data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="text-bg-dark carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">
+                <font dir="auto" style="vertical-align: inherit;">
+                    <font dir="auto" style="vertical-align: inherit;">Próximo</font>
+                </font>
+            </span>
+        </button>
+    </div>
+
+    <!--Abaixo é os  cartões com info-->
+
+    <section class="d-flex justify-content-center my-4">
+        <div class = "container row">
+            <div class=" container card align-items-center p-3 my-4" style="width: 18rem;">
+                <img class="imagem__card__cerebro " src="../assets/cerebro.svg" class="card-img-top"
+                    alt="coisas que a genova fornece">
+                <div class="card-body">
+                    <p class="card-text">A GenovaIA está comprometida com a excelência no atendimento. Todos os chamados são
+                        analisados com precisão técnica, e buscamos responder e solucionar dúvidas de forma ágil, clara e
+                        objetiva, assegurando a continuidade e a eficiência dos processos dos nossos clientes.</p>
+                </div>
+            </div>
+            <div class=" container card align-items-center p-3 my-4" style="width: 18rem;">
+                <img class="imagem__card__cerebro2" src="../assets/cerebro2.svg" class="card-img-top"
+                    alt="coisas que a genova fornece">
+                <div class="card-body">
+                    <p class="card-text">Na GenovaIA cada solicitação registrada é tratada com prioridade técnica. Nossa
+                        equipe analisa, responde e orienta de forma especializada, garantindo suporte contínuo e assertivo
+                        em todas as etapas do atendimento.</p>
+                </div>
+            </div>
+            <div class=" container card align-items-center p-3 my-4" style="width: 18rem;">
+                <img class="imagem__card__bot" src="../assets/bot.svg" class="card-img-top" alt="coisas que a genova fornece">
+                <div class="card-body">
+                    <p class="card-text">A GenovaIA atua com foco em agilidade e precisão técnica. Todas as dúvidas e
+                        chamados são avaliados cuidadosamente para oferecer respostas eficazes, alinhadas às melhores
+                        práticas de suporte.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="text-bg-secondary p-3">
+        <p class="d-flex justify-content-center"><img class = "imagem__genova__branco" src="../assets/genova_branco.svg" alt=""><strong>enova <img src="../assets/c-circle.svg" alt=""> 2025</strong></p>
+    </footer>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script type="module" src="../js/script.js"></script>
+    <script src="../js/script2.js"></script>
+</body>
+
+</html>

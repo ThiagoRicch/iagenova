@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/estilos.css">
+</head>
+
+<body data-bs-theme="light">
+    <header>
+        <nav class="navbar bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img class="imagem__genova" src="../assets/genova.svg"
+                        alt="logo genova"><strong>enova</strong></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title"><img class="imagem__genova__navbar" src="../assets/genova.svg"
+                                alt="logo genova"><strong>enova</strong></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav flex-grow-1 pe-3">
+                            <li><a class="nav-link" href="../interfaces/home.html">Início</a></li>
+                            <li><a class="nav-link" href="../interfaces/chat.html">GenovaIA</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Mais..</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../interfaces/profile.html">Meu Perfil</a></li>
+                                    <li><a class="dropdown-item" href="../interfaces/faleconosco.html">Fale Conosco</a></li>
+                                    <li>
+                                        <div class="dropdown-item">
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" id="modo__noturno">
+                                                <label class="form-check-label" for="modo__noturno">Modo Noturno</label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="info__fale__conosco">
+            <div class="card" style="width: 30rem;">
+                <img src="../assets/whatsapp.svg" class="card-img-top" alt="imagem whatsapp">
+                <div class="card-body">
+                    <h5 class="card-title">Não resolveu o seu problema?</h5>
+                    <p class="card-text">Clique no link abaixo para entrar em contato diretamente com o WhatsApp da
+                        Genova IA. Você será atendido por um técnico especializado e altamente qualificado, pronto para
+                        solucionar seu problema de forma personalizada e profissional.</p>
+                    <a href="https://wa.me/5511914500045?text=Olá,%20preciso%20de%20suporte" target="_blank" class="d-flex justify-content-center btn btn-secondary">WhatsGenova</a>
+                </div>
+            </div>
+            <div class="card" style="width: 30rem;">
+                <img src="../assets/email.svg" class="card-img-top" alt="imagem email">
+                <div class="card-body">
+                    <h5 class="card-title">Não resolveu o seu problema?</h5>
+                    <p class="card-text">Envie um e-mail para a Genova IA clicando no link abaixo. Nossa equipe de
+                        técnicos especializados responderá prontamente, oferecendo suporte profissional e personalizado
+                        para solucionar sua situação de forma eficiente.</p>
+                    <a href="mailto:iagenova2025@gmail.com?subject=Suporte&body=Olá,%20preciso%20de%20ajuda" class="d-flex justify-content-center btn btn-secondary">EmailGenova</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="../js/script2.js"></script>
+</body>
+</html>

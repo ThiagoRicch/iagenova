@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Genova</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/estilos.css">
+    <style>
+        body {
+            background: black;
+            color: white;
+            margin-top: 3em;
+        }
+
+        .chat-box {
+            height: 70vh;
+            overflow-y: auto;
+            padding: 1rem;
+            background: white;
+            border-radius: 12px;
+        }
+
+        .msg {
+            margin: .4rem 0;
+            padding: .6rem .9rem;
+            border-radius: 10px;
+        }
+
+        .msg.user {
+            background: black;
+            text-align: right;
+        }
+
+        .msg.bot {
+            background: black;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body data-bs-theme="light">
+    <!--Abaixo é o header-->
+    <header>
+        <nav class="navbar bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img class="imagem__genova" src="../assets/genova.svg"
+                        alt="logo genova"><strong>enova</strong></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img class="imagem__genova__navbar"
+                                src="../assets/genova.svg" alt="logo genova"><strong
+                                class="titulo__menu__navbar">enova</strong></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../interfaces/home.html">Início</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"
+                                    href="../interfaces/chat.html">GenovaIA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Mais..
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="../interfaces/profile.html">Meu Perfil</a></li>
+                                    <li><a class="dropdown-item" href="../interfaces/faleconosco.html">Fale Consoco</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">
+                                            <div class="form-check form-switch">
+                                                <input class="form-check-input" type="checkbox" role="switch"
+                                                    id="modo__noturno">
+                                                <label class="form-check-label" for="modo__noturno">Modo Noturno</label>
+                                            </div>
+                                        </a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="d-flex flex-column align-items-center p-4">
+            <h1>GenovaIA</h1>
+            <br>
+            <div class="d-flex flex-column align-items-center p-2">
+                <h5>A GenovaIA pode apresentar eventuais erros ou tempo de resposta maior que o esperado.
+                    Caso sua dúvida não seja solucionada, acesse a aba <strong>"Fale Conosco"</strong>.</h5>
+                </div>
+            <div id="messages" class="chat-box w-100"></div>
+            <div class="input-group mt-3">
+                <input id="userInput" type="text" class="form-control" placeholder="Digite sua pergunta...">
+                <button id="sendBtn" class="btn btn-secondary">Enviar</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script type="module" src="../js/script.js"></script>
+    <script src="../js/script2.js"></script>
+    <script type="module" src="../js/config.js"></script>
+    <script type="module" src="../js/chat.js"></script>
+</body>
+
+</html>
