@@ -9,7 +9,7 @@ export default async function handler(req, res) {
   try {
     console.log("👉 Nova requisição recebida:", message);
 
-    // Criar prediction no Replicate usando GPT-Neo 2.7B (mais leve)
+    // Criar prediction no Replicate usando GPT-2 Small (124M) – modelo bem leve
     const predictionRes = await fetch("https://api.replicate.com/v1/predictions", {
       method: "POST",
       headers: {
@@ -17,7 +17,7 @@ export default async function handler(req, res) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        version: "a975d8e8a7f6d2f0b2e3b6c7d5a9f8e4b1c2d3e4", // GPT-Neo 2.7B no Replicate
+        version: "3b1a9e9a6f7d4c8f9b2e1d0a5f8c7b6e9d1a2b3c", // GPT-2 Small (exemplo de ID no Replicate)
         input: { prompt: message },
       }),
     });
@@ -25,9 +25,9 @@ export default async function handler(req, res) {
     let data = await predictionRes.json();
     console.log("📤 Prediction inicial:", data);
 
-    // Polling com timeout maior (30s)
+    // Polling com timeout maior (20s)
     const start = Date.now();
-    const TIMEOUT = 30000; // 30 segundos
+    const TIMEOUT = 20000; // 20 segundos
 
     while (data.status !== "succeeded" && data.status !== "failed") {
       if (Date.now() - start > TIMEOUT) {
