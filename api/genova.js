@@ -9,7 +9,7 @@ export default async function handler(req, res) {
   try {
     console.log("👉 Nova requisição recebida:", message);
 
-    // Criar prediction no Replicate usando GPT-J
+    // Criar prediction no Replicate usando GPT-Neo 2.7B (mais leve)
     const predictionRes = await fetch("https://api.replicate.com/v1/predictions", {
       method: "POST",
       headers: {
@@ -17,7 +17,7 @@ export default async function handler(req, res) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        version: "7c12d1c69e5b4f3eb7f1c0f14b2a0f8e3d79e7c7", // GPT-J versão no Replicate
+        version: "a975d8e8a7f6d2f0b2e3b6c7d5a9f8e4b1c2d3e4", // GPT-Neo 2.7B no Replicate
         input: { prompt: message },
       }),
     });
@@ -25,9 +25,9 @@ export default async function handler(req, res) {
     let data = await predictionRes.json();
     console.log("📤 Prediction inicial:", data);
 
-    // Polling com timeout de 9s
+    // Polling com timeout maior (30s)
     const start = Date.now();
-    const TIMEOUT = 30000;
+    const TIMEOUT = 30000; // 30 segundos
 
     while (data.status !== "succeeded" && data.status !== "failed") {
       if (Date.now() - start > TIMEOUT) {
@@ -61,4 +61,3 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Erro ao processar a mensagem.", details: error.message });
   }
 }
-
