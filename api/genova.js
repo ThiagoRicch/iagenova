@@ -27,7 +27,8 @@ export default async function handler(req, res) {
 
     // Polling com timeout de 9s
     const start = Date.now();
-    const TIMEOUT = 9000;
+    const TIMEOUT = 30000; // 30 segundos
+
 
     while (data.status !== "succeeded" && data.status !== "failed") {
       if (Date.now() - start > TIMEOUT) {
